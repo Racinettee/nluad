@@ -232,14 +232,12 @@ void luaL_openlib (lua_State *L, const(char) *libname, const(luaL_Reg) *l) {
 ** "Abstraction Layer" for basic report of messages and errors
 ** ===================================================================
 */
-
-/* print a string */
-pragma(inline, true) {
-
 @trusted
 ulong lua_writestring(const(char) *s, size_t l) {
     return fwrite(s, char.sizeof, l, stdout);
 }
+/* print a string */
+pragma(inline, true) {
 
 /* print a newline and flush the output */
 void lua_writeline() {

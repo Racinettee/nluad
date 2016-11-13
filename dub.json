@@ -1,8 +1,14 @@
 {
 	"name": "nluad",
+	"targetType": "library",
 	"authors": [
 		"mogu"
 	],
+	"buildTypes": {
+		"release": {
+			"buildOptions": ["releaseMode", "optimize"]
+		}
+	},
 	"description": "D interface of lua.",
 	"copyright": "Copyright © 2016, mogu",
 	"license": "MIT"
